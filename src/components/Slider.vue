@@ -1,7 +1,13 @@
+<style scoped>
+  .logo {
+    font-size: 2em;
+  }
+</style>
 <template>
   <div>
-    <Logo/>
-    <h1>Oi slider here</h1>
+    <Logo class="logo"/>
+    <h1>Slider</h1>
+    <span>A simple slider with VueJs</span>
   </div>
 </template>
 
