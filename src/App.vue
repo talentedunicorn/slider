@@ -4,12 +4,6 @@
   </div>
 </template>
 
-<script>
-  export default {
-    name: 'Slider',
-  };
-</script>
-
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

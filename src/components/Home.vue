@@ -15,7 +15,6 @@
   import Logo from '@/components/Logo';
 
   export default {
-    name: 'Slider',
     components: {
       Logo,
     },
