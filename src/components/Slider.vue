@@ -1,24 +1,36 @@
 <template>
   <div class="slides-wrapper">
+    <a href="#"
+      class="slides-control"
+      title= "previous"
+      @click="prev"
+      v-html="prevButton || arrowLeft"/>
     <ul class="slides">
       <li class="slide" v-for="(slide, index) in slides" :key="index" :class="{ 'active': current === index }">
         <img class="slide-image" :src="slide.url" :alt="slide.text"/>
       </li>
     </ul>
-    <div class="slides-control">
-      <a href="#" @click="prev">Prev</a>
-      <a href="#" @click="next">Next</a>
-    </div>
+    <a href="#"
+      class="slides-control"
+      title="next"
+      @click="next"
+      v-html="nextButton || arrowRight"/>
   </div>
 </template>
 
 <script>
+  const arrowLeft = '<svg viewBox="0 0 20 20" width="1em" height="1em"><path d="M13.891 17.418c0.268 0.272 0.268 0.709 0 0.979s-0.701 0.271-0.969 0l-7.83-7.908c-0.268-0.27-0.268-0.707 0-0.979l7.83-7.908c0.268-0.27 0.701-0.27 0.969 0s0.268 0.709 0 0.979l-7.141 7.419 7.141 7.418z"></path></svg>';
+
+  const arrowRight = '<svg viewBox="0 0 20 20" width="1em" height="1em"><path d="M13.25 10l-7.141-7.42c-0.268-0.27-0.268-0.707 0-0.979 0.268-0.27 0.701-0.27 0.969 0l7.83 7.908c0.268 0.271 0.268 0.709 0 0.979l-7.83 7.908c-0.268 0.271-0.701 0.27-0.969 0s-0.268-0.707 0-0.979l7.141-7.417z"></path></svg>';
+
   export default {
     name: 'Slider',
-    props: ['slides'],
+    props: ['slides', 'prevButton', 'nextButton'],
     data() {
       return {
         current: 0,
+        arrowLeft,
+        arrowRight,
       };
     },
     methods: {
@@ -44,13 +56,24 @@
 
     &-wrapper {
       margin: 2em 0;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+    }
+
+    &-control {
+      background: rgba(#AAA, .2);
+      font-size: 2em;
+      flex: 0 1 auto;
+      display: flex;
+      align-items: center;
     }
 
     .slide {
       display: none;
 
       &.active {
-        display: block;
+        display: flex;
       }
     }
   }
