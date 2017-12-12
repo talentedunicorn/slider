@@ -1,6 +1,6 @@
 <template>
   <div class="slides-wrapper">
-    <a href="#"
+    <button
       class="slides-control"
       title= "previous"
       @click="prev"
@@ -10,7 +10,7 @@
         <img class="slide-image" :src="slide.url" :alt="slide.text"/>
       </li>
     </ul>
-    <a href="#"
+    <button
       class="slides-control"
       title="next"
       @click="next"
@@ -63,6 +63,8 @@
 
     &-control {
       background: rgba(#AAA, .2);
+      border: none;
+      outline: none;
       font-size: 2em;
       flex: 0 1 auto;
       display: flex;
