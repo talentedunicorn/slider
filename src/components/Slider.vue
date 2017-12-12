@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <div class="slides-wrapper">
-      <ul class="slides">
-        <li class="slide" v-for="(slide, index) in slides" :key="index" :class="{ 'active': current === index }">
-          <img class="slide-image" :src="slide.url" :alt="slide.text"/>
-        </li>
-      </ul>
-    </div>
+  <div class="slides-wrapper">
+    <ul class="slides">
+      <li class="slide" v-for="(slide, index) in slides" :key="index" :class="{ 'active': current === index }">
+        <img class="slide-image" :src="slide.url" :alt="slide.text"/>
+      </li>
+    </ul>
     <div class="slides-control">
       <a href="#" @click="prev">Prev</a>
       <a href="#" @click="next">Next</a>
@@ -35,8 +33,6 @@
 </script>
 
 <style lang="scss" scoped>
-  $max-width: 60rem;
-
   .slides {
     list-style: none;
     padding: 0;
@@ -48,7 +44,6 @@
 
     &-wrapper {
       margin: 2em 0;
-      max-width: $max-width;
     }
 
     .slide {
