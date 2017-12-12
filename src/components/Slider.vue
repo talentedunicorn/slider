@@ -74,6 +74,7 @@
 
       &.active {
         display: flex;
+        flex-flow: column nowrap;
       }
     }
   }
