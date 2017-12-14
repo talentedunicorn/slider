@@ -2,7 +2,7 @@
   <div class="slides-wrapper">
     <Indicator
       class="slides-indicator"
-      :steps="slides"
+      :steps="slides.length"
       :current="current"/>
     <button
       class="slides-control"
@@ -10,8 +10,8 @@
       @click="prev"
       v-html="prevButton || arrowLeft"/>
     <ul class="slides">
-      <li class="slide" v-for="(slide, index) in slides" :key="index" :class="{ 'active': current === index }">
-        <img class="slide-image" :src="slide.url" :alt="slide.text"/>
+      <li class="slide" v-for="(slide, index) in slides" :key="index" :class="{ 'active': current === index + 1 }">
+        <img :src="slide.url" :alt="slide.text" />
       </li>
     </ul>
     <button
@@ -40,10 +40,10 @@
     },
     methods: {
       prev() {
-        this.current = this.current > 0 ? this.current - 1 : this.slides.length - 1;
+        this.current = this.current > 1 ? this.current - 1 : this.slides.length;
       },
       next() {
-        this.current = this.current < this.slides.length - 1 ? this.current + 1 : 0;
+        this.current = this.current < this.slides.length ? this.current + 1 : 1;
       },
     },
   };
