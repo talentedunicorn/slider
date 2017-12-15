@@ -27,7 +27,7 @@ export default new Vuex.Store({
     presentationSlides(state) {
       state.slides = [
         { title: 'Hi', content: '<p>I am Slider...a VueJs powered slide component</p>' },
-        { title: '', content: '<h2>Apart from image I</h2><h3>also support <strong>Rich Text</strong></h3>' },
+        { title: '', content: '<h2>Apart from images</h2><img src="//picsum.photos/500/500?random" alt="Image" /><h3 style="font-weight: 100;">i support <strong>Rich Text</strong></h3>' },
       ];
     },
   },
