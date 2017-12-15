@@ -24,5 +24,11 @@ export default new Vuex.Store({
       const total = state.slides.length;
       state.current = state.current < total ? state.current + 1 : 1;
     },
+    presentationSlides(state) {
+      state.slides = [
+        { title: 'Hi', content: '<p>I am Slider...a VueJs powered slide component</p>' },
+        { title: '', content: '<h2>Apart from image I</h2><h3>also support <strong>Rich Text</strong></h3>' },
+      ];
+    },
   },
 });
