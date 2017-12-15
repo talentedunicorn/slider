@@ -31,7 +31,7 @@ export default new Vuex.Store({
         { url: '//picsum.photos/1200/800?image=15', text: 'Image 5' },
       ];
     },
-    presentationSlides(state) {
+    htmlSlides(state) {
       state.slides = [
         { title: 'Hi', content: '<p>I am <strong>Slider</strong>; a VueJs slide (carousel) component</p>' },
         { title: '', content: '<h2>You can add images</h2><img src="//picsum.photos/500/500?random" alt="Image" /><p>with support for <strong>HTML format</strong></p><p>Everything here is <code>html code</code></p>' },

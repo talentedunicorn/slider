@@ -10,7 +10,7 @@
 <template>
   <div class="wrapper">
     <router-link to="/" class="logo"><Logo /></router-link>
-    <h1>Presentation support</h1>
+    <h1>HTML support</h1>
     <Slider :slides="this.$store.state.slides">
       <template slot-scope="props">
         <div class="content">
@@ -33,7 +33,7 @@
     },
     async mounted() {
       this.$store.commit('selectSlide', 1);
-      await this.$store.commit('presentationSlides');
+      await this.$store.commit('htmlSlides');
     },
   };
 </script>

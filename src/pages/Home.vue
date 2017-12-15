@@ -16,7 +16,7 @@
       </template>
     </Slider>
 
-    <router-link to="/presentation">Check out HTML slides</router-link>
+    <router-link to="/html">Check out HTML slides</router-link>
   </div>
 </template>
 
