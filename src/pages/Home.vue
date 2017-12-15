@@ -30,6 +30,7 @@
       Slider,
     },
     async mounted() {
+      this.$store.commit('selectSlide', 1);
       await this.$store.commit('imageSlides');
     },
   };

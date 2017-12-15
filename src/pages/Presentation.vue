@@ -1,7 +1,6 @@
 <style scoped>
   .content {
     padding: 2.5em;
-    min-width: 80vw;
     min-height: 50vh;
     display: flex;
     flex-flow: column;
@@ -10,7 +9,7 @@
 </style>
 <template>
   <div class="wrapper">
-    <router-link to="/"><Logo class="logo" /></router-link>
+    <router-link to="/" class="logo"><Logo /></router-link>
     <h1>Presentation support</h1>
     <Slider :slides="this.$store.state.slides">
       <template slot-scope="props">
@@ -33,6 +32,7 @@
       Logo,
     },
     async mounted() {
+      this.$store.commit('selectSlide', 1);
       await this.$store.commit('presentationSlides');
     },
   };

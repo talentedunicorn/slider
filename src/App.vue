@@ -14,7 +14,12 @@
   margin-top: 60px;
 }
 
+img {
+  max-width: 100%;
+}
+
 .logo {
   font-size: 2em;
+  color: #333;
 }
 </style>
