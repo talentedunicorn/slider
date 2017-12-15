@@ -29,8 +29,8 @@
       Logo,
       Slider,
     },
-    mounted() {
-      this.$store.commit('imageSlides');
+    async mounted() {
+      await this.$store.commit('imageSlides');
     },
   };
 </script>
