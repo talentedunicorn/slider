@@ -14,7 +14,10 @@
     <Logo class="logo"/>
     <h1>Slider</h1>
     <span>A simple slider with VueJs</span>
-    <Slider :slides="this.$store.state.slides.data">
+    <Slider :slides="this.$store.state.slides">
+      <template slot-scope="props">
+        <img :src="props.slide.url" :alt="props.slide.text">
+      </template>
     </Slider>
   </div>
 </template>

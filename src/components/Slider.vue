@@ -11,7 +11,8 @@
       v-html="prevButton || arrowLeft"/>
     <ul class="slides">
       <li class="slide" v-for="(slide, index) in slides" :key="index" :class="{ 'active': current === index + 1 }">
-        <img :src="slide.url" :alt="slide.text" />
+        <slot :slide="slide" :index="index">
+        </slot>
       </li>
     </ul>
     <button
