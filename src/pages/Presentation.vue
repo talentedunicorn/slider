@@ -10,7 +10,7 @@
 </style>
 <template>
   <div class="wrapper">
-    <router-link></router-link>
+    <router-link to="/"><Logo class="logo" /></router-link>
     <h1>Presentation support</h1>
     <Slider :slides="this.$store.state.slides">
       <template slot-scope="props">
@@ -25,10 +25,12 @@
 
 <script>
   import Slider from '@/components/Slider';
+  import Logo from '@/components/Logo';
 
   export default {
     components: {
       Slider,
+      Logo,
     },
     mounted() {
       this.$store.commit('presentationSlides');

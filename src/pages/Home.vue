@@ -1,8 +1,4 @@
 <style scoped>
-  .logo {
-    font-size: 2em;
-  }
-
   .wrapper {
     display: flex;
     flex-flow: column;
@@ -19,6 +15,8 @@
         <img :src="props.slide.url" :alt="props.slide.text">
       </template>
     </Slider>
+
+    <router-link to="/presentation">Check out HTML slides</router-link>
   </div>
 </template>
 
@@ -30,6 +28,9 @@
     components: {
       Logo,
       Slider,
+    },
+    mounted() {
+      this.$store.commit('imageSlides');
     },
   };
 </script>
