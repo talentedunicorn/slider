@@ -19,6 +19,9 @@ export default new Vuex.Store({
       const total = state.slides.length;
       state.current = state.current < total ? state.current + 1 : 1;
     },
+    selectSlide(state, slide) {
+      state.current = slide;
+    },
     imageSlides(state) {
       state.slides = [
         { url: '//picsum.photos/800/600?image=11', text: 'Image 1' },

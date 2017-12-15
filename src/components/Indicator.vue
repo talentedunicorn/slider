@@ -6,7 +6,8 @@
       viewBox="0 0 20 20"
       v-for="i in steps"
       :class="{ 'active': i === current }"
-      :key="i">
+      :key="i"
+      @click="selectSlide(i)">
       <circle cx="10" cy="10" r="10"></circle>
     </svg>
   </div>
@@ -23,6 +24,11 @@
       current: {
         type: Number,
         default: 1,
+      },
+    },
+    methods: {
+      selectSlide(i) {
+        this.$store.commit('selectSlide', i);
       },
     },
   };

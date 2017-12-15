@@ -34,17 +34,21 @@
     },
     data() {
       return {
-        current: 1,
         arrowLeft: '<svg viewBox="0 0 20 20" width="1em" height="1em"><path d="M13.891 17.418c0.268 0.272 0.268 0.709 0 0.979s-0.701 0.271-0.969 0l-7.83-7.908c-0.268-0.27-0.268-0.707 0-0.979l7.83-7.908c0.268-0.27 0.701-0.27 0.969 0s0.268 0.709 0 0.979l-7.141 7.419 7.141 7.418z"></path></svg>',
         arrowRight: '<svg viewBox="0 0 20 20" width="1em" height="1em"><path d="M13.25 10l-7.141-7.42c-0.268-0.27-0.268-0.707 0-0.979 0.268-0.27 0.701-0.27 0.969 0l7.83 7.908c0.268 0.271 0.268 0.709 0 0.979l-7.83 7.908c-0.268 0.271-0.701 0.27-0.969 0s-0.268-0.707 0-0.979l7.141-7.417z"></path></svg>',
       };
     },
+    computed: {
+      current() {
+        return this.$store.state.current;
+      },
+    },
     methods: {
       prev() {
-        this.current = this.current > 1 ? this.current - 1 : this.slides.length;
+        this.$store.commit('prev');
       },
       next() {
-        this.current = this.current < this.slides.length ? this.current + 1 : 1;
+        this.$store.commit('next');
       },
     },
   };
