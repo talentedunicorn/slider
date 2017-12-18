@@ -46,7 +46,7 @@
   }
 
   svg {
-    margin: .5em;
+    margin: 1em .5em;
     fill: rgba(0, 0, 0, .3);
   }
 </style>
