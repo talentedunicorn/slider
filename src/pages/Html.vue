@@ -8,8 +8,7 @@
   }
 </style>
 <template>
-  <div class="wrapper">
-    <router-link to="/" class="logo"><Logo /></router-link>
+  <div>
     <h1>HTML support</h1>
     <Slider :slides="this.$store.state.slides">
       <template slot-scope="props">
@@ -24,12 +23,10 @@
 
 <script>
   import Slider from '@/components/Slider';
-  import Logo from '@/components/Logo';
 
   export default {
     components: {
       Slider,
-      Logo,
     },
     async mounted() {
       this.$store.commit('selectSlide', 1);
