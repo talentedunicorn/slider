@@ -1,8 +1,9 @@
-<style scoped>
+<style lang="scss" scoped>
   .wrapper {
     display: flex;
     flex-flow: column;
     align-items: center;
+    height: 100vh;
   }
 
   a {
@@ -26,11 +27,11 @@
       </svg>
     </a>
   </p>
-    <Slider :slides="this.$store.state.slides">
-      <template slot-scope="props">
-        <img :src="props.slide.url" :alt="props.slide.text">
-      </template>
-    </Slider>
+  <Slider :slides="this.$store.state.slides">
+    <template slot-scope="props">
+      <img :src="props.slide.url" :alt="props.slide.text">
+    </template>
+  </Slider>
 
     <router-link to="/html">Check out HTML slides</router-link>
   </div>
@@ -39,6 +40,8 @@
 <script>
   import Logo from '@/components/Logo';
   import Slider from '@/components/Slider';
+
+  require('normalize.css');
 
   export default {
     components: {
