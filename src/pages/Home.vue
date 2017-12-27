@@ -32,8 +32,6 @@
 <script>
   import Slider from '@/components/Slider';
 
-  require('normalize.css');
-
   export default {
     components: {
       Slider,

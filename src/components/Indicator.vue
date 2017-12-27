@@ -5,6 +5,7 @@
       height="1em"
       viewBox="0 0 20 20"
       v-for="i in steps"
+      class="step"
       :class="{ 'active': i === current }"
       :key="i"
       @click="selectSlide(i)">
