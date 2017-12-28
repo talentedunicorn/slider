@@ -1,6 +1,6 @@
-# slider
+# slider [![Build Status](https://travis-ci.org/talentedunicorn/slider.svg?branch=master)](https://travis-ci.org/talentedunicorn/slider)
 
-> Simple slider module with Vue
+Simple slider module with Vue
 
 ## Build Setup
 
